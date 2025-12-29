@@ -23,9 +23,9 @@ export default function SideBar() {
             </Link>
           </li>
           <li>
-            <Link className="text-lg tracking-tight font-medium" to="/">
+            <a className="text-lg tracking-tight font-medium" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               CV
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
