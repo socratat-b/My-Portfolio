@@ -1,34 +1,45 @@
 import { Link } from "react-router-dom";
+import SidebarConnect from "./SidebarConnect";
 
 export default function SideBar() {
   return (
-    <aside className="hidden lg:flex flex-col items-center py-6 sticky h-dvh inset-y-0 left-0 w-56 border border-black ">
-      <Link
-        to={"/"}
-        className="font-black tracking-tighter text-2xl mb-8 block"
-      >
-        Tat
-      </Link>
+    <aside className="hidden lg:flex flex-col py-6 sticky h-dvh inset-y-0 left-0 w-56 border border-black">
+      <div className="flex flex-col items-center">
+        <Link
+          to={"/"}
+          className="font-black tracking-tighter text-2xl mb-8 block"
+        >
+          Tat
+        </Link>
 
-      <nav>
-        <ul className="space-y-4">
-          <li>
-            <Link className="text-lg tracking-tight font-medium" to="/about">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link className="text-lg tracking-tight font-medium" to="/projects">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <a className="text-lg tracking-tight font-medium" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              CV
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav>
+          <ul className="space-y-4">
+            <li>
+              <Link className="text-lg tracking-tight font-medium" to="/about">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link className="text-lg tracking-tight font-medium" to="/projects">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <a className="text-lg tracking-tight font-medium" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                CV
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      {/* Separator */}
+      <div className="border-t border-black/20 my-6 mx-6"></div>
+
+      {/* Contact Section */}
+      <div className="flex flex-col items-center">
+        <SidebarConnect />
+      </div>
     </aside>
   );
 }

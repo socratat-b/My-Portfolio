@@ -1,31 +1,14 @@
 import ProjectCard from "../components/ProjectCard";
 
 export default function HomePage() {
-  // Sample projects data - replace with your actual projects
   const projects = [
     {
       id: 1,
-      title: "Project Name",
-      description: "A brief description of what this project does and the technologies used.",
-      tags: ["React", "TypeScript", "Tailwind"],
-      link: "#",
-      image: "" // Add your project image URL here
-    },
-    {
-      id: 2,
-      title: "Project Name",
-      description: "A brief description of what this project does and the technologies used.",
-      tags: ["Node.js", "Express", "MongoDB"],
-      link: "#",
-      image: "" // Add your project image URL here
-    },
-    {
-      id: 3,
-      title: "Project Name",
-      description: "A brief description of what this project does and the technologies used.",
-      tags: ["Next.js", "PostgreSQL"],
-      link: "#",
-      image: "" // Add your project image URL here
+      title: "Order Bean",
+      description: "A fullstack cafe ordering & management system with real-time order processing, menu management, and analytics.",
+      tags: ["Next.js", "React", "Prisma", "Supabase", "TypeScript", "Tailwind CSS"],
+      link: "https://order-bean.vercel.app/",
+      image: "/order-bean-preview.jpeg"
     }
   ];
 
@@ -48,9 +31,9 @@ export default function HomePage() {
           </p>
 
           {/* Call to Action */}
-          <div className="pt-2">
+          <div className="pt-2 lg:hidden">
             <a
-              href="mailto:your-email@example.com"
+              href="#footer"
               className="inline-flex items-center px-8 py-3.5 rounded-lg bg-black text-white font-medium tracking-tight hover:bg-black/90 transition-all hover:shadow-lg"
             >
               Connect with Me

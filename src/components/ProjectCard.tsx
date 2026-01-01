@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -7,13 +9,19 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ title, description, tags, link, image }: ProjectCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const showSeeMore = description.length > 100; // Show "See more" if description is longer than 100 characters
+
   return (
-    <a
-      href={link}
-      className="group block overflow-hidden rounded-xl border border-black/10 bg-white hover:border-black/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+    <div className="group block overflow-hidden rounded-xl border border-black/10 bg-white hover:border-black/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
     >
       {/* Project Image */}
-      <div className="aspect-video w-full overflow-hidden bg-black/5">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="aspect-video w-full overflow-hidden bg-black/5 block"
+      >
         {image ? (
           <img
             src={image}
@@ -37,20 +45,36 @@ export default function ProjectCard({ title, description, tags, link, image }: P
             </svg>
           </div>
         )}
-      </div>
+      </a>
 
       {/* Project Content */}
       <div className="p-6">
-        <h4 className="text-lg font-bold tracking-tight text-black/80 mb-2 group-hover:text-black transition-colors">
-          {title}
-        </h4>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block"
+        >
+          <h4 className="text-lg font-bold tracking-tight text-black/80 mb-2 group-hover:text-black transition-colors">
+            {title}
+          </h4>
+        </a>
 
-        <p className="text-sm text-black/60 mb-4 leading-relaxed line-clamp-2">
+        <p className={`text-sm text-black/60 mb-2 leading-relaxed ${!isExpanded && showSeeMore ? 'line-clamp-2' : ''}`}>
           {description}
         </p>
 
+        {showSeeMore && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-xs font-medium text-black/70 hover:text-black transition-colors mb-4"
+          >
+            {isExpanded ? 'See less' : 'See more'}
+          </button>
+        )}
+
         {/* Tags */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mt-4">
           {tags.map((tag, index) => (
             <span
               key={index}
@@ -61,6 +85,6 @@ export default function ProjectCard({ title, description, tags, link, image }: P
           ))}
         </div>
       </div>
-    </a>
+    </div>
   );
 }
