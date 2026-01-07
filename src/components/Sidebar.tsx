@@ -11,7 +11,7 @@ export default function SideBar() {
     }`;
 
   return (
-    <aside className="hidden lg:flex flex-col sticky h-dvh inset-y-0 left-0 w-64 border-r border-black/10 bg-white">
+    <aside className="hidden lg:flex flex-col sticky h-dvh inset-y-0 left-0 w-64 border-r border-black/10 bg-white/80 backdrop-blur-sm">
       {/* Header Section */}
       <div className="flex flex-col px-8 pt-12 pb-8">
         <Link
