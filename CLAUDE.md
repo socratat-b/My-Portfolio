@@ -38,18 +38,28 @@ src/
 ├── index.css         # Tailwind CSS import
 ├── components/       # Shared UI components
 │   ├── Header.tsx    # Mobile header (hidden on lg+ screens)
-│   └── Sidebar.tsx   # Desktop sidebar navigation (visible on lg+ screens)
+│   ├── Sidebar.tsx   # Desktop sidebar navigation (visible on lg+ screens)
+│   ├── SidebarConnect.tsx  # Contact links for sidebar
+│   ├── Footer.tsx    # Footer component with contact section
+│   ├── ProjectCard.tsx     # Reusable project card component
+│   └── about/        # About page section components
+│       ├── HeroSection.tsx
+│       ├── InfoSection.tsx
+│       ├── EducationSection.tsx
+│       ├── WorkExperienceSection.tsx
+│       └── InterestsSection.tsx
 └── pages/            # Route-level page components
     ├── HomePage.tsx
-    └── AboutPage.tsx
+    ├── AboutPage.tsx
+    └── ProjectsPage.tsx
 ```
 
 ### Routing Architecture
 
 Routes are defined in `App.tsx` using React Router's declarative `<Routes>` component:
-- `/` - HomePage
-- `/about` - AboutPage
-- `/projects` - Placeholder (not yet implemented as separate component)
+- `/` - HomePage (displays hero section with project cards)
+- `/about` - AboutPage (composed of multiple section components)
+- `/projects` - ProjectsPage
 
 Navigation is handled by two responsive components:
 - **Header**: Mobile/tablet navigation (visible below lg breakpoint)
@@ -67,6 +77,12 @@ The main App layout uses Tailwind's flex utilities for responsive design:
 ### Styling Approach
 
 Uses Tailwind CSS v4 with the Vite plugin for automatic CSS processing. The `index.css` file only imports Tailwind - all styling is done via utility classes in components.
+
+### Component Patterns
+
+- **Page Composition**: AboutPage demonstrates a compositional pattern where the page imports and composes multiple section components (HeroSection, InfoSection, etc.) separated by dividers
+- **Reusable Components**: ProjectCard is a reusable component with props for title, description, tags, link, and image. It includes expandable descriptions and hover effects
+- **Data Colocation**: HomePage stores project data as a local array constant and maps over it to render ProjectCard components
 
 ## Deployment
 
