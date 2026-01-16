@@ -56,8 +56,8 @@ export default function ProjectsPage() {
       title: "Ground Control Point (GCP) Web Application",
       description: "Built for Guinobatan City using Next.js and Leaflet.js, enabling interactive geospatial mapping for students of Bicol University.",
       tags: ["Next.js", "Leaflet.js", "TypeScript", "Tailwind CSS"],
-      link: "#",
-      image: ""
+      link: "https://guinopinpoint-nu.vercel.app/",
+      image: "/GuinoPinPoint_Preview.png"
     },
     {
       id: 7,
