@@ -10,6 +10,14 @@ export default function HomePage() {
       tags: ["Next.js", "React", "Prisma", "Supabase", "TypeScript", "Tailwind CSS"],
       link: "https://order-bean.vercel.app/",
       image: "/order-bean-preview.jpeg"
+    },
+    {
+      id: 2,
+      title: "GuinoPinPoint",
+      description: "A Ground Control Point (GCP) finder application for Guinobatan, Albay. Features interactive mapping with filtering by barangay, remarks, and type, along with detailed GCP information and navigation.",
+      tags: ["React", "Leaflet", "TypeScript", "Tailwind CSS"],
+      link: "https://guinopinpoint-nu.vercel.app/",
+      image: "/GuinoPinPoint_Preview.png"
     }
   ];
 
