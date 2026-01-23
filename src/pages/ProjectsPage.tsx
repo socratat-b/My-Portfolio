@@ -77,6 +77,14 @@ export default function ProjectsPage() {
       tags: ["Next.js", "React", "Prisma", "Supabase", "TypeScript", "Tailwind CSS"],
       link: "https://order-bean.vercel.app/",
       image: "/order-bean-preview.jpeg"
+    },
+    {
+      id: 9,
+      title: "Tinda-Ko",
+      description: "A mobile-first POS and inventory management system designed for Filipino sari-sari stores and small retail businesses.",
+      tags: ["React", "TypeScript", "Tailwind CSS"],
+      link: "https://tinda-ko-one.vercel.app/",
+      image: "/tindako-preview.jpeg"
     }
   ];
 

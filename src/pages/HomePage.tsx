@@ -18,6 +18,14 @@ export default function HomePage() {
       tags: ["React", "Leaflet", "TypeScript", "Tailwind CSS"],
       link: "https://guinopinpoint-nu.vercel.app/",
       image: "/GuinoPinPoint_Preview.png"
+    },
+    {
+      id: 3,
+      title: "Tinda-Ko",
+      description: "A mobile-first POS and inventory management system designed for Filipino sari-sari stores and small retail businesses.",
+      tags: ["React", "TypeScript", "Tailwind CSS"],
+      link: "https://tinda-ko-one.vercel.app/",
+      image: "/tindako-preview.jpeg"
     }
   ];
 
