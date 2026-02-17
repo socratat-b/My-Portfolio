@@ -26,6 +26,14 @@ export default function HomePage() {
       tags: ["React", "TypeScript", "Tailwind CSS"],
       link: "https://tinda-ko-one.vercel.app/",
       image: "/tindako-preview.jpeg"
+    },
+    {
+      id: 4,
+      title: "JMBT Carpentry Services",
+      description: "A modern, static carpentry service website featuring a distinctive \"Refined Workshop\" aesthetic with smooth animations and polished UI components.",
+      tags: ["Next.js", "Tailwind CSS", "shadcn/ui", "Framer Motion"],
+      link: "https://jmbt-carpentry-services.vercel.app/",
+      image: "/jmbt-preview.jpeg"
     }
   ];
 
